@@ -4,11 +4,11 @@ using PersonalRecipeDatabase.Models;
 
 namespace PersonalRecipeDatabase.Controllers;
 
-public class HomeController : Controller
+public class RecipeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
+    private readonly ILogger<RecipeController> _logger;
 
-    public HomeController(ILogger<HomeController> logger)
+    public RecipeController(ILogger<RecipeController> logger)
     {
         _logger = logger;
     }
