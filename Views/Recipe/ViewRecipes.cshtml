@@ -1,4 +1,6 @@
-﻿@model List<Recipe>;
+﻿@using PersonalRecipeDatabase.Database;
+
+@model List<Recipe>;
 
 @{
     ViewData["Title"] = "Recipes";
@@ -18,6 +20,8 @@
         <th scope="col">Name</th>
         <th scope="col">Rating</th>
         <th scope="col">Creation time</th>
+        <th scope="col">Course</th>
+        <th scope="col">Ingredients</th>
         </tr>
     </thead>
     <tbody>
@@ -27,6 +31,14 @@
             <td>@recipe.Name</td>
             <td>@recipe.Rating</td>
             <td>@recipe.CreationTimeInMinutes</td>
+            <td>@recipe.Course</td>
+            <td>@if(recipe.Ingredients.Any()){
+                    @foreach (var ingredient in recipe.Ingredients)
+                    {
+                        @ingredient.Name <br/>
+                    }
+                }
+            </td>
             </tr>
         }
 

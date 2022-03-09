@@ -1,3 +1,5 @@
+namespace PersonalRecipeDatabase.Database;
+
 public static class DatabaseInitializer {
     public static async Task Create()
     {
@@ -18,13 +20,13 @@ public static class DatabaseInitializer {
                 context.Recipes?.RemoveRange(testRecipes);
             }
             
-            var exampleRecipe = new Recipe{
+            var exampleRecipe = new Recipe {
                 Name = testRecipeName,
                 CreationTimeInMinutes = 15,
-                //    Course = CourseEnum.Dinner,
-                //    Ingredients = new List<string>{
-                //        "zucchini","paprika", "pasta", "cheese"
-                //    },
+                Course = CourseType.Dinner,
+                Ingredients = new List<Ingredient>{
+                    new Ingredient { Name= "paprika" },
+                },
                 //    Categories = new List<CategoryEnum>{
                 //        CategoryEnum.Easy
                 //    },
@@ -32,7 +34,6 @@ public static class DatabaseInitializer {
                 //        "This is the explanation for this recipe."
                 //    },
                 Rating = 4.5f,
-
             };
             context.Add(exampleRecipe);
     }

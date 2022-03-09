@@ -348,3 +348,7 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+Database/Recipe.db
+Database/Recipe.db-shm
+Database/Recipe.db-wal
+Database/Recipe.db

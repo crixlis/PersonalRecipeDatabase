@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using PersonalRecipeDatabase.Database;
 using PersonalRecipeDatabase.Models;
 
 namespace PersonalRecipeDatabase.Controllers;
